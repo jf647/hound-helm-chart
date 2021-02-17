@@ -55,6 +55,8 @@ spec:
           env:
           - name: GIT_SSH
             value: "/etc/hound/wrapper"
+          - name: HOME
+            value: /data
           {{- end }}
           ports:
             - name: http
