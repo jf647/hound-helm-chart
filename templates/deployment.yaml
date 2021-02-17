@@ -22,7 +22,6 @@ spec:
         release: {{ .Release.Name }}
       annotations:
         checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
-        nadt.net/privateimage: "true"
     spec:
       initContainers:
         - name: "init"
