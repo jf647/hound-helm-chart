@@ -27,9 +27,9 @@ spec:
         - name: "init"
           image: "busybox"
           {{- if .Values.id_rsa.install }}
-          command: [ "sh", "-c", "cp /etc/ssh-key/id_rsa /data; chown nobody:nogroup /data/id_rsa; chmod 0400 /data/id_rsa; chown -R nobody:nogroup /data" ]
+          command: [ "sh", "-c", "cp /etc/ssh-key/id_rsa /data; chown nobody:nobody /data/id_rsa; chmod 0400 /data/id_rsa; chown -R nobody:nobody /data" ]
           {{ else }}
-          command: [ "sh", "-c", "chown -R nobody:nogroup /data" ]
+          command: [ "sh", "-c", "chown -R nobody:nobody /data" ]
           {{- end }}
           volumeMounts:
             - name: hound-data
