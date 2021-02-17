@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: etsy/hound
+  repository: gcr.io/nadt-184401/hound
   tag: latest
   pullPolicy: Always
 
