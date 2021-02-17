@@ -58,11 +58,6 @@ Persistence:
 config:
   max-concurrent-indexers: 2
   dbpath: /data
-  repos:
-    heroku-buildpack-wallarm-node:
-      url: https://github.com/wallarm/heroku-buildpack-wallarm-node.git
-    ingress-plus:
-      url: https://github.com/wallarm/ingress-plus.git
 
 id_rsa:
   install: false
