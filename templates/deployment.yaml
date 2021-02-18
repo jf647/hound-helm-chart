@@ -63,7 +63,7 @@ spec:
 {{- if .Values.HealthProbes.liveness }}
           livenessProbe:
             httpGet:
-              path: /
+              path: /healthz
               port: http
             initialDelaySeconds: {{ .Values.HealthProbes.initialDelaySeconds }}
             periodSeconds: {{ .Values.HealthProbes.periodSeconds }}
