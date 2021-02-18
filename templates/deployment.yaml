@@ -51,10 +51,8 @@ spec:
             runAsUser: 65534
           command: ["/go/bin/houndd"]
           args: ["-conf", "/etc/hound/config.json"]
-          env:
-          - name: HOME
-            value: /data
           {{- if .Values.id_rsa.install }}
+          env:
           - name: GIT_SSH
             value: "/etc/hound/wrapper"
           {{- end }}
